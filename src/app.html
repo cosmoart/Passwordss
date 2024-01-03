@@ -10,6 +10,12 @@
 
 <body data-sveltekit-preload-data="hover">
 	<div style="display: contents">%sveltekit.body%</div>
+
+	<script>
+		lightMode = localStorage.lightMode === "undefined" ? !window.matchMedia("(prefers-color-scheme: dark)").matches : localStorage.lightMode === "true";
+		document.body.classList.toggle("light-mode", lightMode);
+		localStorage.setItem("lightMode", lightMode)
+	</script>
 </body>
 
 </html>
