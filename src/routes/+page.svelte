@@ -2,8 +2,6 @@
 	import Form from '../components/Form.svelte';
 	import DarkToggle from '../components/DarkToggle.svelte';
 	import { onMount } from 'svelte';
-	let catchyMode;
-	let clipboardDialog;
 
 	onMount(() => {
 		document.body.style.setProperty('--cursorY', '0.5');
@@ -23,122 +21,50 @@
 
 <svelte:head>
 	<title>Passwordss</title>
+	<!-- {/* Meta */} -->
+	<meta name="author" content="Cosmo" />
+	<meta name="theme-color" content="#5a4ceb" />
+	<meta
+		name="description"
+		content="Strong Password Generator – Create strong, random combinations to protect your online accounts. Keep your data safe with just one click!"
+	/>
+	<meta name="robots" content="index, nofollow" />
+
+	<!-- {/* Open Graph */} -->
+	<meta property="og:title" content="Passwordss" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://passwordss.vercel.app/preview.jpg" />
+	<meta property="og:url" content="https://passwordss.vercel.app" />
+	<meta
+		property="og:description"
+		content="Strong Password Generator – Create strong, random combinations to protect your online accounts. Keep your data safe with just one click!"
+	/>
+
+	<!-- {/* Twitter */} -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@Cosmoart" />
+	<meta name="twitter:creator" content="@Cosmoart" />
+	<meta name="twitter:title" content="Passwordss" />
+	<meta
+		name="twitter:description"
+		content="Strong Password Generator – Create strong, random combinations to protect your online accounts. Keep your data safe with just one click!"
+	/>
+	<meta name="twitter:image" content="https://passwordss.vercel.app/preview.jpg" />
 </svelte:head>
+
 <div class="box">
 	<main
-		class={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#2A2B38] bg-opacity-75 sm:p-10 py-8 px-5 w-11/12 max-w-[35rem] text-white after:w-4/5 after:h-80 after:-top-40 after:absolute after:-z-10 transition-all ${
-			catchyMode ? 'max-w-[33rem]' : 'max-w-[30rem]'
-		}`}
+		class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#2A2B38] bg-opacity-75 sm:p-10 py-8 px-5 w-11/12 max-w-[35rem] text-white after:w-4/5 after:h-80 after:-top-40 after:absolute after:-z-10 transition-all"
 		style="box-shadow: 0 0 40px #6447ea14;"
 	>
 		<h1 class="uppercase font-bold mb-6 text-xl sm:text-2xl ">P4SSW0RD G3NER4T0R</h1>
-		<Form {clipboardDialog} bind:catchyMode />
+		<Form />
 	</main>
 </div>
 <dialog
-	bind:this={clipboardDialog}
+	id="clipboardDialog"
 	class="transition-all px-8 py-4 text-[17px] bg-[#2A2B38] text-white font-bold block -top-5 bottom-auto opacity-0 open:top-2 open:opacity-100 backdrop:bg-transparent"
 >
 	<p class="font-medium tracking-wide text-base">Copied to clipboard!</p>
 </dialog>
 <DarkToggle />
-
-<style>
-	:global(body.light-mode) {
-		background: #e4ebff;
-	}
-	:global(body) {
-		background-color: #1c1c1f;
-	}
-	:global(body::after) {
-		content: '';
-		position: absolute;
-		left: 0px;
-		top: 0;
-		background-image: url(../assets/pattern_square.svg);
-		opacity: 0.2;
-		mask-image: radial-gradient(70% 80% at 50% 50%, black 40%, transparent 70%);
-		-webkit-mask-image: radial-gradient(70% 80% at 50% 50%, black 40%, transparent 70%);
-		mask-image: radial-gradient(
-			70% 80% at calc(var(--cursorX) * 100%) calc(var(--cursorY) * 100%),
-			black 40%,
-			transparent 70%
-		);
-		-webkit-mask-image: radial-gradient(
-			70% 80% at calc(var(--cursorX) * 100%) calc(var(--cursorY) * 100%),
-			black 40%,
-			transparent 70%
-		);
-		width: 100%;
-		height: 100%;
-		z-index: -100;
-	}
-	.box {
-		height: 100%;
-		width: 100%;
-	}
-	@keyframes binary {
-		25% {
-			content: '01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001 01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001 01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001';
-		}
-		50% {
-			content: '01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100 01100101 01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100 01100101 01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100';
-		}
-		75% {
-			content: '01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001 01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001 01100110 01101111 01110010 00100000 01100001 00100000 01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101 00100001 00100001';
-		}
-		100% {
-			content: '01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100 01100101 01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100 01100101 01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100';
-		}
-	}
-	.box::before,
-	.box::after {
-		animation: 1s linear 1s infinite normal none running binary;
-		content: '01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100 01100101 01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100 01100101 01001111 01110000 01100101 01101110 00100000 01110100 01101000 01100101 00100000 01100011 01101111 01101110 01110011 01101111 01101100';
-		left: 0px;
-		color: white;
-		font-size: 16px;
-		pointer-events: none;
-		position: absolute;
-		text-align: center;
-		width: 100%;
-		opacity: 0.3;
-		-webkit-mask-image: linear-gradient(
-			90deg,
-			rgba(0, 0, 0, 0) 5%,
-			rgb(0, 0, 0) 20%,
-			rgb(0, 0, 0) 80%,
-			rgba(0, 0, 0, 0) 95%
-		);
-		mask-image: linear-gradient(
-			90deg,
-			rgba(0, 0, 0, 0) 5%,
-			rgb(0, 0, 0) 20%,
-			rgb(0, 0, 0) 80%,
-			rgba(0, 0, 0, 0) 95%
-		);
-		white-space: nowrap;
-		overflow: hidden;
-		z-index: 200;
-	}
-	.box::before {
-		bottom: 0px;
-	}
-	:global(body.light-mode) .box::before,
-	:global(body.light-mode) .box::after {
-		color: black;
-		opacity: 0.5;
-	}
-	:global(body.light-mode)::after {
-		filter: invert(1);
-		opacity: 0.4;
-	}
-	:global(body.light-mode) main {
-		background: rgba(255, 255, 255, 0.75);
-		color: black;
-	}
-	:global(body.light-mode) dialog {
-		background: white;
-		color: black;
-	}
-</style>

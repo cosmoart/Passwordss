@@ -1,38 +1,119 @@
-# create-svelte
+<div id="top"></div>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<div align="center">
+	<a href="https://passwordss.vercel.app">
+		<img src="./readme/header.webp" alt="Web preview" />
+	</a>
 
-## Creating a project
+  # 🔐 Passwordss 🔑
 
-If you're seeing this, you've probably already done this step. Congrats!
+  Strong Password Generator – Create strong, random combinations to protect your online accounts. Keep your data safe with just one click!.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+  <a href="https://passwordss.vercel.app">View Demo</a>
+  ·
+  <a href="https://github.com/cosmoart/Passwordss/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/cosmoart/Passwordss/issues">Request Feature</a>
 
-# create a new project in my-app
-npm create svelte@latest my-app
+</div>
+
+
+<!-- TABLE OF CONTENTS -->
+<details>
+<summary>Table of contents</summary>
+
+- [About The Project](#about-the-project)
+- [Screenshots](#screenshots)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+- [License](#license)
+- [Contact](#contact)
+
+</details>
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+Generate strong passwords with Passwordss. The passwords are generated locally in your browser and are never sent to the server. Passwordss is a simple, secure, and free password generator. You can use it to create strong passwords for your online accounts and protect your data from hackers.
+
+<p align="right"><a href="#top">⬆ Back to top</a></p>
+
+
+<!-- SCREENSHOTS -->
+## Screenshots
+
+<table>
+    <tr>
+      <td>
+          <img src="./readme/home-mobile.webp" width="100%" title="Mobile solution"  />
+      </td>
+      <td>
+          <img src="./readme/home-tablet.webp" width="100%" title="Tablet solution"/>
+      </td>
+      <td>
+          <img src="./readme/home-desktop.webp" width="100%" title="Desktop solution"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <img src="./readme/home-light-mobile.webp" width="100%" title="Mobile solution"  />
+      </td>
+      <td>
+          <img src="./readme/home-light-tablet.webp" width="100%" title="Tablet solution"/>
+      </td>
+      <td>
+          <img src="./readme/home-light-desktop.webp" width="100%" title="Desktop solution"/>
+      </td>
+    </tr>
+</table>
+
+<p align="right"><a href="#top">⬆ Back to top</a></p>
+
+
+### Built With
+
+* [Vercel](https://vercel.com/) For hosting
+* [Tailwind CSS](https://tailwindcss.com/) For styling
+* [Figma](https://www.figma.com/) For the design
+* [Svelte](https://svelte.dev/) For the frontend
+
+<p align="right"><a href="#top">⬆ Back to top</a></p>
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+1. Clone or fork the repo
+```sh
+git clone https://github.com/cosmoart/Passwordss
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+2. Go to the project folder
+```sh
+cd Passwordss
+```
+3. Install NPM packages
+```sh
+npm install
+```
+4. Run the project
+```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+<p align="right"><a href="#top">⬆ Back to top</a></p>
 
-To create a production version of your app:
 
-```bash
-npm run build
-```
+<!-- LICENSE -->
+## License
 
-You can preview the production build with `npm run preview`.
+Distributed under the **MIT License**. See [`LICENSE`](https://github.com/cosmoart/Passwordss/blob/main/LICENCE) for more information.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+<p align="right"><a href="#top">⬆ Back to top</a></p>
+
+<!-- CONTACT -->
+## Contact
+* My website - [https://cosmoart.vercel.app](https://cosmoart.vercel.app)
+* Twitter - [@CosmoArt0](https://twitter.com/cosmoart0)
+
+<p align="right"><a href="#top">⬆ Back to top</a></p>

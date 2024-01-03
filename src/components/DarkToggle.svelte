@@ -1,6 +1,6 @@
 <script>
-	import iconSun from '../assets/icon_sun.svg';
-	import iconMoon from '../assets/icon_moon.svg';
+	import iconSun from '@/assets/icon_sun.svg';
+	import iconMoon from '@/assets/icon_moon.svg';
 	import { onMount } from 'svelte';
 
 	let lightMode;
