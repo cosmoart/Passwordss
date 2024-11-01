@@ -82,6 +82,7 @@
 				password_length <= 3 ? 'opacity-50 hover:scale-100' : ''
 			}`}
 		/>
+
 		<input
 			type="range"
 			min={password_min_length}
@@ -94,6 +95,7 @@
 					(password_max_length - password_min_length)
 			)}`}
 		/>
+
 		<button
 			type="button"
 			disabled={password_length >= password_max_length}

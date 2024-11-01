@@ -18,7 +18,11 @@
 	}
 </script>
 
-<button class="absolute top-5 right-5 w-6 h-6 grid place-items-center" on:click={darkToggle}>
+<button
+	class="size-[26px] grid place-items-center hover:scale-105 hover:rotate-[25deg] transition-transform active:scale-95 relative"
+	title={`${lightMode ? 'Dark' : 'Light'} mode`}
+	on:click={darkToggle}
+>
 	<img
 		src={iconMoon}
 		alt="Dark mode"

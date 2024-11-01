@@ -1,7 +1,7 @@
 <script>
-	import Form from '../components/Form.svelte';
-	import DarkToggle from '../components/DarkToggle.svelte';
+	import Form from '@/components/Form.svelte';
 	import { onMount } from 'svelte';
+	import NavBar from '@/components/NavBar.svelte';
 
 	onMount(() => {
 		document.body.style.setProperty('--cursorY', '0.5');
@@ -67,4 +67,4 @@
 >
 	<p class="font-medium tracking-wide text-base">Copied to clipboard!</p>
 </dialog>
-<DarkToggle />
+<NavBar />

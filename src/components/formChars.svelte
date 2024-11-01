@@ -3,7 +3,7 @@
 	export let createPassword, setLocalStorage, password_charset;
 
 	function handleColorChange(query, type = 'add') {
-		document.querySelectorAll(query).forEach((item) => item.classList[type]('text-purple-600'));
+		document.querySelectorAll(query).forEach((item) => item.classList[type]('char-hover'));
 	}
 
 	function handleCheck(e) {
